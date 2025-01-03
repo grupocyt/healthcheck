@@ -19,7 +19,7 @@ if (Get-Command nssm -ErrorAction SilentlyContinue) {
     
     # Verificar la instalación
     if (Get-Command nssm -ErrorAction SilentlyContinue) {
-        Write-Output "NSSM se ha instalado correctamente."
+        Write-Output "NSSM v2.24 se ha instalado correctamente."
     } else {
         Write-Output "Hubo un problema al instalar NSSM."
     }
