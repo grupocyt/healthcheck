@@ -1,4 +1,3 @@
-
 # Verificar si Node.js está instalado
 if (Get-Command node -ErrorAction SilentlyContinue) {
     Write-Output "Node.js ya está instalado."
@@ -6,7 +5,7 @@ if (Get-Command node -ErrorAction SilentlyContinue) {
     Write-Output "Node.js no está instalado. Procediendo con la instalación..."
     
     # Descargar el instalador de Node.js
-    $nodeInstaller = "https://nodejs.org/dist/v18.16.0/node-v18.16.0-x64.msi"
+    $nodeInstaller = "https://nodejs.org/dist/v22.11.0/node-v22.11.0-x64.msi"
     $installerPath = "$env:TEMP\nodejs_installer.msi"
     Invoke-WebRequest -Uri $nodeInstaller -OutFile $installerPath
     
@@ -15,7 +14,7 @@ if (Get-Command node -ErrorAction SilentlyContinue) {
     
     # Verificar la instalación
     if (Get-Command node -ErrorAction SilentlyContinue) {
-        Write-Output "Node.js se ha instalado correctamente."
+        Write-Output "Node.js v22.11.0 se ha instalado correctamente."
     } else {
         Write-Output "Hubo un problema al instalar Node.js."
     }
