@@ -11,7 +11,7 @@ if (Get-Command nssm -ErrorAction SilentlyContinue) {
     Invoke-WebRequest -Uri $nssmUrl -OutFile $zipPath
     
     # Extraer NSSM
-    Expand-Archive -Path $zipPath -DestinationPath $extractPath
+    Expand-Archive -Path $zipPath -DestinationPath $extractPath -force
     
     # Agregar NSSM al PATH
     $env:Path += ";$extractPath\nssm-2.24\win64"
